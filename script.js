@@ -5,7 +5,6 @@ let isOnCooldown = false;
 const slapSoundFile = "Slap.mp3";
 const randomSoundFiles = [
     "Moan.mp3",
-    "Girl Saying Yes, Daddy Sound Effect.mp3"
 ];
 
 function buttonClicked() {
@@ -22,7 +21,7 @@ function buttonClicked() {
     if (numButtonClicks % 10 === 0) {
         const randomIndex = Math.floor(Math.random() * randomSoundFiles.length);
         const selectedSound = new Audio(randomSoundFiles[randomIndex]);
-        selectedSound.volume = 1.0;
+        selectedSound.volume = 5.0;
         startCooldown(selectedSound);
         selectedSound.play();
     } else {
